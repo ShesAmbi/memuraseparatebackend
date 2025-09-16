@@ -133,7 +133,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # during development allow React dev server to call API
 CORS_ALLOW_ALL_ORIGINS = True
 
-
-
 # or for quick dev you can set (less secure):
 # CORS_ALLOW_ALL_ORIGINS = True
+
+SECURE_SSL_REDIRECT = True          # Redirect HTTP to HTTPS
+SESSION_COOKIE_SECURE = True        # Only send cookies over HTTPS
+CSRF_COOKIE_SECURE = True           # Only send CSRF cookies over HTTPS
+
